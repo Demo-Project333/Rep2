@@ -1,6 +1,6 @@
 properties([[$class: 'GithubProjectProperty', 
            displayName: '',
-           projectUrlStr: 'https://github.com/Demo-Project333/Rep1.git/'], 
+           projectUrlStr: 'https://github.com/Demo-Project333/'], 
            pipelineTriggers([upstream('Demo-Project333'),githubPush()])])
 
 pipeline {
