@@ -2,7 +2,7 @@ properties([
     [$class: 'GithubProjectProperty',
     displayName: '',
     projectUrlStr: 'https://github.com/Demo-Project333/Rep2.git/'],
-    pipelineTriggers([upstream('https://github.com/Demo-Project333/Rep1.git'),githubPush()])])
+    pipelineTriggers([upstream(upstreamProjects: "https://github.com/Demo-Project333/Rep1.git", threshold: hudson.model.Result.SUCCESS),githubPush()])])
 
 pipeline {
     agent any 
